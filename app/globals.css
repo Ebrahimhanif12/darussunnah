@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf9f5;
+  --foreground: #102318;
+  --brand-primary: #0b4d2c;
+  --brand-dark: #07331d;
+  --brand-secondary: #156e3b;
+  --brand-gold: #c8941e;
+  --brand-gold-bright: #e0ad2b;
+  --brand-gold-soft: #f5e9c8;
+  --surface-ivory: #faf9f5;
+  --surface-sage: #eef5f0;
+  --ink-primary: #102318;
+  --ink-body: #2c3d33;
+  --ink-muted: #5a6c60;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-gold-bright: var(--brand-gold-bright);
+  --color-brand-gold-soft: var(--brand-gold-soft);
+  --color-surface-ivory: var(--surface-ivory);
+  --color-surface-sage: var(--surface-sage);
+  --color-ink-primary: var(--ink-primary);
+  --color-ink-body: var(--ink-body);
+  --color-ink-muted: var(--ink-muted);
+
+  --font-sans: var(--font-bangla), "Hind Siliguri", Arial, sans-serif;
+  --font-bangla: var(--font-bangla), "Hind Siliguri", Arial, sans-serif;
+  --font-arabic: var(--font-arabic), "Amiri", Georgia, serif;
+  --font-english: var(--font-english), "Cinzel", Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--surface-ivory);
+  color: var(--ink-body);
+  font-family: var(--font-bangla), "Hind Siliguri", Arial, sans-serif;
+  overflow-x: clip;
+  text-rendering: optimizeLegibility;
+}
+
+/* Subtle Islamic geometric motif background */
+.islamic-pattern {
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(11, 77, 44, 0.07) 1px,
+      transparent 0
+    ),
+    radial-gradient(
+      circle at 13px 13px,
+      rgba(200, 148, 30, 0.08) 1px,
+      transparent 0
+    );
+  background-size: 26px 26px;
+}
+
+.islamic-pattern-dark {
+  background-image: radial-gradient(
+      circle at 1px 1px,
+      rgba(245, 233, 200, 0.08) 1px,
+      transparent 0
+    ),
+    radial-gradient(
+      circle at 14px 14px,
+      rgba(224, 173, 43, 0.07) 1px,
+      transparent 0
+    );
+  background-size: 28px 28px;
+}
+
+/* Breaking notice marquee ticker with pause-on-hover */
+@keyframes notice-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-notice-marquee {
+  display: flex;
+  width: max-content;
+  animation: notice-marquee 38s linear infinite;
+}
+
+.notice-ticker-wrapper:hover .animate-notice-marquee,
+.notice-ticker-wrapper:focus-within .animate-notice-marquee {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-notice-marquee {
+    animation: none;
+  }
 }
