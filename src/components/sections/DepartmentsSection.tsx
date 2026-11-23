@@ -67,7 +67,7 @@ function DepartmentCard({
           {dept.levelRangeBn}
         </p>
 
-        <p className="mt-3 text-sm text-ink-muted leading-relaxed">
+        <p className="mt-3 text-sm text-ink-muted leading-relaxed text-justify">
           {detailed ? dept.fullDescBn : dept.shortDescBn}
         </p>
 

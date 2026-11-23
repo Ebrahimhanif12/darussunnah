@@ -17,6 +17,7 @@ export interface Notice {
   summaryBn: string;
   bodyBn: string[];
   issuedByBn: string;
+  attachmentUrl?: string;
 }
 
 export const NOTICE_CATEGORIES: ("সকল" | NoticeCategory)[] = [

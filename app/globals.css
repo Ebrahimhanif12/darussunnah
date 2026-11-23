@@ -31,8 +31,8 @@
   --color-ink-body: var(--ink-body);
   --color-ink-muted: var(--ink-muted);
 
-  --font-sans: var(--font-bangla), "Hind Siliguri", Arial, sans-serif;
-  --font-bangla: var(--font-bangla), "Hind Siliguri", Arial, sans-serif;
+  --font-sans: var(--font-bangla), "Noto Sans Bengali", Arial, sans-serif;
+  --font-bangla: var(--font-bangla), "Noto Sans Bengali", Arial, sans-serif;
   --font-arabic: var(--font-arabic), "Amiri", Georgia, serif;
   --font-english: var(--font-english), "Cinzel", Georgia, serif;
 }
@@ -45,7 +45,7 @@ html {
 body {
   background-color: var(--surface-ivory);
   color: var(--ink-body);
-  font-family: var(--font-bangla), "Hind Siliguri", Arial, sans-serif;
+  font-family: var(--font-bangla), "Noto Sans Bengali", Arial, sans-serif;
   overflow-x: clip;
   text-rendering: optimizeLegibility;
 }

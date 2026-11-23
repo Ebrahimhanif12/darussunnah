@@ -60,8 +60,11 @@ export function AboutHistorySection() {
               title={HISTORY_INTRO.titleBn}
             />
 
-            <FadeInUp delay={0.08} className="space-y-4 text-ink-body text-sm sm:text-base leading-relaxed">
-              <p className="font-semibold text-brand-primary text-base sm:text-lg">
+            <FadeInUp
+              delay={0.08}
+              className="space-y-4 text-ink-body text-sm sm:text-base leading-relaxed text-justify"
+            >
+              <p className="font-semibold text-brand-primary text-base sm:text-lg text-left">
                 {HISTORY_INTRO.leadBn}
               </p>
               {HISTORY_INTRO.overviewParagraphs.map((paragraph, index) => (

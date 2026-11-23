@@ -1,9 +1,13 @@
 import Link from "next/link";
 import { BellRing } from "lucide-react";
-import { NOTICES } from "@/src/data/notices";
+import { NOTICES as STATIC_NOTICES, type Notice } from "@/src/data/notices";
 
-export function NoticeTicker() {
-  const items = NOTICES.slice(0, 5);
+interface NoticeTickerProps {
+  notices?: Notice[];
+}
+
+export function NoticeTicker({ notices = STATIC_NOTICES }: NoticeTickerProps) {
+  const items = notices.slice(0, 5);
 
   return (
     <div className="bg-white border-b border-brand-primary/15 shadow-xs">

@@ -51,7 +51,7 @@ export default function DepartmentsPage() {
                   <h3 className="text-lg font-bold text-ink-primary leading-snug">
                     {item.titleBn}
                   </h3>
-                  <p className="mt-2 text-sm text-ink-muted leading-relaxed">
+                  <p className="mt-2 text-sm text-ink-muted leading-relaxed text-justify">
                     {item.descriptionBn}
                   </p>
                 </div>

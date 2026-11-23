@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight,
   BookOpen,
+  Info,
   Mail,
   MapPin,
   Phone,
@@ -144,9 +145,31 @@ export function TeachersDirectory({
           />
         )}
 
-        {/* Full Mode Controls: Faculty/Alumni Tabs, Department Filter, Search */}
+        {/* Full Mode Controls: Notice Banner, Faculty/Alumni Tabs, Department Filter, Search */}
         {mode === "full" && (
-          <div className="mb-8 space-y-4">
+          <div className="mb-8 space-y-5">
+            {/* Dignified Notice: Remaining Teachers Being Uploaded */}
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-surface-sage via-white to-brand-gold-soft/35 border border-brand-gold/45 p-5 sm:p-6 shadow-xs">
+              <div className="absolute top-0 left-0 bottom-0 w-1.5 bg-gradient-to-b from-brand-primary via-brand-gold to-brand-secondary" />
+              <div className="flex items-start gap-3.5 pl-2">
+                <div className="w-10 h-10 rounded-xl bg-brand-primary text-brand-gold-soft flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                  <Info className="w-5 h-5" />
+                </div>
+                <div className="space-y-1">
+                  <h2 className="text-base sm:text-lg font-bold text-ink-primary">
+                    সম্মানিত আসাতিযায়ে কেরামের তালিকা হালনাগাদ চলছে
+                  </h2>
+                  <p className="text-sm sm:text-[15px] text-ink-body leading-relaxed text-justify">
+                    আলহামদুলিল্লাহ, অত্র জামিয়ায় আরও বহু বিজ্ঞ উলামায়ে কেরাম,
+                    মুহাদ্দিস, মুফতি ও অভিজ্ঞ শিক্ষকবৃন্দ নিষ্ঠার সাথে দ্বীনি
+                    খেদমতে নিয়োজিত রয়েছেন। আমাদের সম্মানিত সকল শিক্ষকের তথ্য ও
+                    ছবি সংগ্রহ ও যাচাই-বাছাইয়ের কাজ চলমান রয়েছে—খুব শীঘ্রই
+                    পূর্ণাঙ্গ তালিকা এখানে সংযুক্ত করা হবে, ইনশাআল্লাহ।
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white p-4 rounded-2xl border border-brand-primary/12 shadow-xs">
               {/* Faculty vs Alumni Switch */}
               <div className="inline-flex rounded-xl bg-surface-sage p-1 self-start">
@@ -248,7 +271,7 @@ export function TeachersDirectory({
                   </div>
 
                   {teacher.bio && (
-                    <p className="mt-4 text-xs sm:text-sm text-ink-muted leading-relaxed line-clamp-2">
+                    <p className="mt-4 text-xs sm:text-sm text-ink-muted leading-relaxed line-clamp-2 text-justify">
                       {teacher.bio}
                     </p>
                   )}
@@ -364,7 +387,7 @@ export function TeachersDirectory({
                       <BookOpen className="w-4 h-4 text-brand-gold" />
                       শিক্ষাগত যোগ্যতা ও সংক্ষিপ্ত জীবনী
                     </h4>
-                    <p className="text-ink-body leading-relaxed whitespace-pre-line">
+                    <p className="text-ink-body leading-relaxed whitespace-pre-line text-justify">
                       {selectedTeacher.bio}
                     </p>
                   </div>

@@ -83,7 +83,7 @@ export function DonationSection() {
                 <h3 className="text-base sm:text-lg font-bold text-ink-primary">
                   {fund.titleBn}
                 </h3>
-                <p className="mt-2 text-xs sm:text-sm text-ink-muted leading-relaxed">
+                <p className="mt-2 text-xs sm:text-sm text-ink-muted leading-relaxed text-justify">
                   {fund.descriptionBn}
                 </p>
               </div>

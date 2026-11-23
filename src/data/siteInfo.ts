@@ -116,6 +116,11 @@ export const NAVIGATION_ITEMS: NavItem[] = [
         description: "সর্বশেষ বিজ্ঞপ্তি, পরীক্ষা ও ভর্তি নোটিশ",
       },
       {
+        label: "সংবাদ ও কার্যক্রম",
+        href: "/posts",
+        description: "মাহফিল, অনুষ্ঠান ও জামিয়ার সাম্প্রতিক প্রতিবেদন",
+      },
+      {
         label: "ফটো গ্যালারি",
         href: "/gallery",
         description: "জামিয়ার ক্যাম্পাস, মসজিদ ও শিক্ষা কার্যক্রমের স্থিরচিত্র",

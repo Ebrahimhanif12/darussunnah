@@ -16,24 +16,25 @@ export function SiteFooter() {
     <footer className="bg-brand-dark text-white/85 border-t-4 border-brand-gold relative overflow-hidden">
       <div className="absolute inset-0 islamic-pattern-dark opacity-50 pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-8">
+        {/* Clean Equal 4-Column Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 items-start">
           {/* Column 1: Institutional Identity */}
           <div className="space-y-4">
             <div className="flex items-center gap-3.5">
-              <div className="w-14 h-14 rounded-full overflow-hidden bg-white p-0.5 ring-2 ring-brand-gold shrink-0">
+              <div className="w-13 h-13 rounded-full overflow-hidden bg-white p-0.5 ring-2 ring-brand-gold shrink-0">
                 <Image
                   src={SITE_INFO.logo}
                   alt={SITE_INFO.nameBn}
-                  width={56}
-                  height={56}
+                  width={52}
+                  height={52}
                   className="w-full h-full object-contain rounded-full"
                 />
               </div>
-              <div>
+              <div className="min-w-0">
                 <p
                   dir="rtl"
-                  className="font-arabic text-base text-brand-gold-soft leading-tight text-left"
+                  className="font-arabic text-base text-brand-gold-soft leading-tight text-left truncate"
                 >
                   {SITE_INFO.nameAr}
                 </p>
@@ -43,13 +44,13 @@ export function SiteFooter() {
               </div>
             </div>
 
-            <p className="text-sm text-white/75 leading-relaxed">
+            <p className="text-sm text-white/75 leading-relaxed text-justify">
               ১৯২৭ সালে প্রতিষ্ঠিত টেকনাফ ও কক্সবাজারের শতবর্ষী ঐতিহ্যবাহী
               দ্বীনি বিদ্যাপীঠ। পবিত্র কুরআন ও সুন্নাহর বিশুদ্ধ শিক্ষা, আদর্শ
               চরিত্র গঠন এবং মানবতার কল্যাণে নিবেদিত।
             </p>
 
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/8 border border-brand-gold/30">
+            <div className="inline-flex items-center px-3 py-1.5 rounded-lg bg-white/8 border border-brand-gold/30">
               <span
                 dir="rtl"
                 className="font-arabic text-sm text-brand-gold-soft"
@@ -72,6 +73,7 @@ export function SiteFooter() {
                 { label: "শিক্ষকমণ্ডলীর তালিকা", href: "/teachers" },
                 { label: "ভর্তি তথ্য ও নিয়মাবলী", href: "/admission" },
                 { label: "নোটিশ বোর্ড", href: "/notices" },
+                { label: "সংবাদ ও কার্যক্রম", href: "/posts" },
                 { label: "ফটো গ্যালারি", href: "/gallery" },
                 { label: "যোগাযোগ ও অবস্থান", href: "/contact" },
               ].map((link) => (
@@ -108,6 +110,15 @@ export function SiteFooter() {
               ))}
               <li>
                 <Link
+                  href="/departments#ifta-tajweed"
+                  className="text-white/75 hover:text-brand-gold-soft transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span className="text-brand-gold text-xs">▸</span>
+                  ইফতা, তাফসীর ও তাজবীদ
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/departments#computer-vocational"
                   className="text-white/75 hover:text-brand-gold-soft transition-colors inline-flex items-center gap-1.5"
                 >
@@ -127,7 +138,7 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          {/* Column 4: Contact & Donation CTA */}
+          {/* Column 4: Contact & Actions */}
           <div>
             <h3 className="text-white font-bold text-base mb-4 pb-2 border-b border-white/10 flex items-center gap-2">
               <span className="w-1.5 h-4 bg-brand-gold rounded-full" />
@@ -168,7 +179,7 @@ export function SiteFooter() {
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-brand-gold hover:bg-brand-gold-bright text-brand-dark text-xs sm:text-sm font-bold transition-colors"
               >
                 <HeartHandshake className="w-4 h-4" />
-                মাদরাসায় অনুদান দিন
+                <span>মাদরাসায় অনুদান দিন</span>
               </Link>
               <a
                 href={SITE_INFO.googleMapsUrl}
@@ -183,13 +194,17 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Bottom Copyright Strip */}
-        <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm text-white/65">
-          <p className="text-center sm:text-left">
-            © {SITE_INFO.copyrightYearBn} {SITE_INFO.nameBn}। সর্বস্বত্ব
+        {/* Symmetrical 3-Column Bottom Strip */}
+        <div className="mt-12 pt-6 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 items-center gap-3 text-xs text-white/70">
+          <p className="text-center md:text-left">
+            © {SITE_INFO.copyrightYearBn} {SITE_INFO.shortNameBn}। সর্বস্বত্ব
             সংরক্ষিত।
           </p>
-          <p className="font-english text-[11px] tracking-wider uppercase text-brand-gold-soft/80">
+          <p className="text-center text-brand-gold-soft/90 font-medium">
+            Developed and maintained by{" "}
+            <span className="text-white font-semibold">Ebrahim Hanif</span>
+          </p>
+          <p className="font-english text-[11px] tracking-wider uppercase text-brand-gold-soft/75 text-center md:text-right">
             {SITE_INFO.nameEn} • Est. 1927
           </p>
         </div>

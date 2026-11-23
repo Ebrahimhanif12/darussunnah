@@ -93,7 +93,7 @@ export default function AdmissionPage() {
                 <h3 className="text-lg font-bold text-brand-gold-soft mb-3">
                   আবাসিক ও লিল্লাহ বোর্ডিং সুবিধা
                 </h3>
-                <p className="text-sm text-white/90 leading-relaxed">
+                <p className="text-sm text-white/90 leading-relaxed text-justify">
                   {ADMISSION_INFO.boardingInfoBn}
                 </p>
                 <div className="mt-4 pt-4 border-t border-white/15 space-y-2 text-xs sm:text-sm">
@@ -138,7 +138,7 @@ export default function AdmissionPage() {
                   <div className="w-7 h-7 rounded-lg bg-brand-primary text-brand-gold-soft text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
                     <ShieldAlert className="w-4 h-4" />
                   </div>
-                  <p className="text-sm sm:text-base text-ink-body leading-relaxed">
+                  <p className="text-sm sm:text-base text-ink-body leading-relaxed text-justify">
                     {rule}
                   </p>
                 </div>

@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   ArrowRight,
   Calendar,
+  ExternalLink,
   FileText,
   Pin,
   Search,
@@ -13,7 +14,7 @@ import {
 } from "lucide-react";
 import {
   NOTICE_CATEGORIES,
-  NOTICES,
+  NOTICES as STATIC_NOTICES,
   type Notice,
   type NoticeCategory,
 } from "@/src/data/notices";
@@ -22,6 +23,7 @@ import { StaggerContainer, StaggerItem } from "@/src/components/MotionPrimitives
 
 interface NoticeBoardSectionProps {
   mode?: "preview" | "full";
+  notices?: Notice[];
 }
 
 const CATEGORY_STYLES: Record<NoticeCategory, string> = {
@@ -34,6 +36,7 @@ const CATEGORY_STYLES: Record<NoticeCategory, string> = {
 
 export function NoticeBoardSection({
   mode = "preview",
+  notices = STATIC_NOTICES,
 }: NoticeBoardSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState<
     "সকল" | NoticeCategory
@@ -41,7 +44,7 @@ export function NoticeBoardSection({
   const [query, setQuery] = useState("");
   const [activeNotice, setActiveNotice] = useState<Notice | null>(null);
 
-  const filteredNotices = NOTICES.filter((notice) => {
+  const filteredNotices = notices.filter((notice) => {
     const matchesCat =
       selectedCategory === "সকল" || notice.category === selectedCategory;
     const q = query.trim().toLowerCase();
@@ -151,7 +154,7 @@ export function NoticeBoardSection({
                       {notice.titleBn}
                     </h3>
 
-                    <p className="mt-2 text-sm text-ink-muted leading-relaxed line-clamp-2">
+                    <p className="mt-2 text-sm text-ink-muted leading-relaxed line-clamp-2 text-justify">
                       {notice.summaryBn}
                     </p>
 
@@ -228,10 +231,25 @@ export function NoticeBoardSection({
                 </button>
               </div>
 
-              <div className="p-6 overflow-y-auto space-y-4 text-sm sm:text-base text-ink-body leading-relaxed">
+              <div className="p-6 overflow-y-auto space-y-4 text-sm sm:text-base text-ink-body leading-relaxed text-justify">
                 {activeNotice.bodyBn.map((para, idx) => (
                   <p key={idx}>{para}</p>
                 ))}
+                {activeNotice.attachmentUrl && (
+                  <div className="pt-2">
+                    <a
+                      href={activeNotice.attachmentUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-sage hover:bg-brand-primary hover:text-white text-brand-primary font-semibold text-sm border border-brand-primary/20 transition-colors"
+                    >
+                      <FileText className="w-4 h-4" />
+                      <span>সংযুক্ত ফাইল / বিজ্ঞপ্তি দেখুন</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                )}
+
                 <div className="pt-4 mt-4 border-t border-brand-primary/10 text-sm font-semibold text-brand-primary">
                   আদেশক্রমে: {activeNotice.issuedByBn}
                 </div>

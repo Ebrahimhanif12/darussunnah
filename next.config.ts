@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         hostname: "drive.google.com",
         pathname: "/thumbnail**",
       },
+      {
+        protocol: "https",
+        hostname: "**.supabase.co",
+        pathname: "/storage/v1/object/public/**",
+      },
     ],
   },
   experimental: {

@@ -55,7 +55,7 @@ export function AdmissionSection() {
               </div>
             </div>
 
-            <div className="mt-6 p-4 rounded-xl bg-brand-gold/15 border border-brand-gold/40 text-xs sm:text-sm text-brand-gold-soft leading-relaxed">
+            <div className="mt-6 p-4 rounded-xl bg-brand-gold/15 border border-brand-gold/40 text-xs sm:text-sm text-brand-gold-soft leading-relaxed text-justify">
               <strong className="text-white">আবাসিক ও লিল্লাহ বোর্ডিং: </strong>
               {ADMISSION_INFO.boardingInfoBn}
             </div>

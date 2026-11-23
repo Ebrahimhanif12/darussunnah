@@ -90,7 +90,7 @@ export function MuhtamimMessageSection() {
                   {MUHTAMIM_MESSAGE.salutationBn}
                 </p>
 
-                <div className="space-y-4 text-sm sm:text-base text-ink-body leading-[1.85]">
+                <div className="space-y-4 text-sm sm:text-base text-ink-body leading-[1.85] text-justify">
                   {MUHTAMIM_MESSAGE.paragraphs.map((para, idx) => (
                     <p key={idx}>{para}</p>
                   ))}

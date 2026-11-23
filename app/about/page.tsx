@@ -36,13 +36,13 @@ export default function AboutPage() {
       <section id="history" className="py-14 md:py-20 bg-surface-ivory">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-16">
-            <div className="lg:col-span-7 space-y-4 text-ink-body text-sm sm:text-base leading-[1.85]">
+            <div className="lg:col-span-7 space-y-4 text-ink-body text-sm sm:text-base leading-[1.85] text-justify">
               <SectionHeader
                 align="left"
                 eyebrow="জামিয়া বৃক্ষ"
                 title={HISTORY_INTRO.titleBn}
               />
-              <p className="text-base sm:text-lg font-semibold text-brand-primary">
+              <p className="text-base sm:text-lg font-semibold text-brand-primary text-left">
                 {HISTORY_INTRO.leadBn}
               </p>
               {HISTORY_INTRO.overviewParagraphs.map((para, idx) => (
@@ -99,7 +99,7 @@ export default function AboutPage() {
                       <h3 className="text-lg sm:text-xl font-bold text-ink-primary">
                         {milestone.titleBn}
                       </h3>
-                      <p className="mt-2 text-sm sm:text-base text-ink-body leading-relaxed">
+                      <p className="mt-2 text-sm sm:text-base text-ink-body leading-relaxed text-justify">
                         {milestone.summaryBn}
                       </p>
                     </div>
@@ -135,7 +135,7 @@ export default function AboutPage() {
                     <h3 className="text-lg font-bold text-ink-primary">
                       {pillar.titleBn}
                     </h3>
-                    <p className="mt-2.5 text-sm text-ink-muted leading-relaxed">
+                    <p className="mt-2.5 text-sm text-ink-muted leading-relaxed text-justify">
                       {pillar.descriptionBn}
                     </p>
                   </div>

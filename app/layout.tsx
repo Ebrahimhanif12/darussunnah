@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Amiri, Cinzel, Hind_Siliguri } from "next/font/google";
+import { Amiri, Cinzel, Noto_Sans_Bengali } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/src/components/SiteHeader";
 import { SiteFooter } from "@/src/components/SiteFooter";
+import { PublicOnly } from "@/src/components/PublicOnly";
 import { SITE_INFO } from "@/src/data/siteInfo";
 
-const hindSiliguri = Hind_Siliguri({
+const notoSansBengali = Noto_Sans_Bengali({
   variable: "--font-bangla",
   subsets: ["bengali", "latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -51,12 +52,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="bn"
-      className={`${hindSiliguri.variable} ${amiri.variable} ${cinzel.variable} h-full antialiased`}
+      className={`${notoSansBengali.variable} ${amiri.variable} ${cinzel.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-surface-ivory text-ink-body selection:bg-brand-primary selection:text-white">
-        <SiteHeader />
+        <PublicOnly>
+          <SiteHeader />
+        </PublicOnly>
         <main className="flex-1">{children}</main>
-        <SiteFooter />
+        <PublicOnly>
+          <SiteFooter />
+        </PublicOnly>
       </body>
     </html>
   );
