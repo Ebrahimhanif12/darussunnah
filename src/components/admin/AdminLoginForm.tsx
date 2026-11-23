@@ -53,7 +53,7 @@ export function AdminLoginForm({ configMissing }: AdminLoginFormProps) {
             type="email"
             required
             autoComplete="email"
-            placeholder="admin@darussunnahnhila.edu.bd"
+            placeholder="Enter your admin email"
             className="w-full pl-10 pr-4 py-3 rounded-xl border border-brand-primary/20 bg-surface-ivory/60 text-sm text-ink-primary focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary"
           />
         </div>

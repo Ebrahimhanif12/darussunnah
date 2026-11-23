@@ -9,6 +9,7 @@ import {
   ChevronDown,
   GraduationCap,
   HeartHandshake,
+  LogIn,
   Mail,
   MapPin,
   Menu,
@@ -288,6 +289,13 @@ export function SiteHeader() {
                 <GraduationCap className="w-4 h-4" />
                 <span>ভর্তি চলছে</span>
               </Link>
+              <Link
+                href="/admin"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-white/12 hover:bg-white/22 text-white border border-white/25 text-sm font-semibold transition-colors"
+              >
+                <LogIn className="w-4 h-4 text-brand-gold-soft" />
+                <span>লগইন</span>
+              </Link>
             </div>
 
             {/* Mobile Controls */}
@@ -448,6 +456,14 @@ export function SiteHeader() {
                     অনুদান দিন
                   </Link>
                 </div>
+                <Link
+                  href="/admin"
+                  onClick={() => setMobileOpen(false)}
+                  className="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-white hover:bg-surface-sage text-brand-primary border border-brand-primary/20 text-sm font-semibold transition-colors"
+                >
+                  <LogIn className="w-4 h-4 text-brand-gold" />
+                  <span>অ্যাডমিন লগইন</span>
+                </Link>
                 <a
                   href={`tel:${SITE_INFO.phoneRaw}`}
                   className="flex items-center justify-center gap-2 text-xs text-ink-muted py-1"
