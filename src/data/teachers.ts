@@ -8,6 +8,7 @@ export interface DirectorMember {
   roleBadge: string;
   designation: string;
   subtitle: string;
+  phone?: string;
   photo?: string;
   photoPosition?: string;
   featured?: boolean;
@@ -29,6 +30,19 @@ export const DIRECTOR_BOARD: DirectorMember[] = [
   {
     id: "dir-02",
     precedence: 2,
+    nameBn: "মাওলানা ক্বারী মুখতার আহমদ সাহেব (দা.বা.)",
+    nameEn: "Mawlana Qari Mukhtar Ahmad",
+    roleBadge: "সদরে মুহতামিম ও শায়খুল হাদীস",
+    designation: "সদরে মুহতামিম ও শায়খুল হাদীস",
+    subtitle: "সদরে মুহতামিম ও শায়খুল হাদীস, জামিয়া দারুস সুন্নাহ, হ্নীলা",
+    phone: "+880 1832-619565",
+    photo: "/mukhtarhujur.jpeg",
+    photoPosition: "55% 30%",
+    featured: true,
+  },
+  {
+    id: "dir-03",
+    precedence: 3,
     nameBn: "মাওলানা আজিজুল হক (দা.বা.)",
     nameEn: "Mawlana Azizul Haque",
     roleBadge: "নায়েবে মুহতামিম (নির্বাহী পরিচালক)",
@@ -38,8 +52,8 @@ export const DIRECTOR_BOARD: DirectorMember[] = [
     photoPosition: "50% 18%",
   },
   {
-    id: "dir-03",
-    precedence: 3,
+    id: "dir-04",
+    precedence: 4,
     nameBn: "মাওলানা মিসবাহ উদ্দিন মামুন (দা.বা.)",
     nameEn: "Mawlana Misbah Uddin Mamun",
     roleBadge: "নাযেমে তা'লীমাত (শিক্ষা পরিচালক)",

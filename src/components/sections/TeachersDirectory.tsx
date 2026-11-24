@@ -111,7 +111,7 @@ function DirectorPortrait({ director }: { director: DirectorMember }) {
 
   return (
     <div
-      className={`w-[168px] sm:w-[184px] mx-auto p-[3px] rounded-t-[96px] rounded-b-2xl bg-gradient-to-b from-[#E5BC54] via-[#D4A024] to-[#9E7212] ${
+      className={`w-[160px] sm:w-[172px] mx-auto p-[3px] rounded-t-[92px] rounded-b-2xl bg-gradient-to-b from-[#E5BC54] via-[#D4A024] to-[#9E7212] ${
         director.featured
           ? "shadow-[0_14px_30px_-10px_rgba(11,77,44,0.42)]"
           : "shadow-[0_10px_24px_-10px_rgba(11,77,44,0.28)]"
@@ -177,7 +177,7 @@ function DirectorBoardShowcase() {
         </div>
       </FadeInUp>
 
-      <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7 max-w-5xl mx-auto">
+      <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 max-w-7xl mx-auto">
         {orderedDirectors.map((director) => (
           <StaggerItem key={director.id} className="h-full">
             <article
@@ -195,7 +195,7 @@ function DirectorBoardShowcase() {
                 }`}
               />
 
-              <div className="p-6 sm:p-7 flex-1 flex flex-col items-center text-center">
+              <div className="p-5 sm:p-6 flex-1 flex flex-col items-center text-center">
                 <DirectorPortrait director={director} />
 
                 <span
@@ -215,7 +215,7 @@ function DirectorBoardShowcase() {
                   {director.roleBadge}
                 </span>
 
-                <h4 className="mt-3 text-lg sm:text-[1.15rem] font-bold text-ink-primary leading-snug">
+                <h4 className="mt-3 text-base sm:text-[1.08rem] font-bold text-ink-primary leading-snug">
                   {director.nameBn}
                 </h4>
 
@@ -226,6 +226,16 @@ function DirectorBoardShowcase() {
                 <p className="mt-3 pt-3 border-t border-brand-primary/10 w-full text-xs sm:text-[13px] text-ink-body leading-relaxed">
                   {director.subtitle}
                 </p>
+
+                {director.phone && (
+                  <a
+                    href={`tel:${director.phone.replace(/[^0-9+]/g, "")}`}
+                    className="mt-auto pt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-brand-primary hover:text-brand-secondary transition-colors"
+                  >
+                    <Phone className="w-3.5 h-3.5 text-brand-gold shrink-0" />
+                    <span>{director.phone}</span>
+                  </a>
+                )}
               </div>
             </article>
           </StaggerItem>
