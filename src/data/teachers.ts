@@ -59,6 +59,8 @@ export const DIRECTOR_BOARD: DirectorMember[] = [
     roleBadge: "নাযেমে তা'লীমাত (শিক্ষা পরিচালক)",
     designation: "নাযেমে তা'লীমাত (শিক্ষা পরিচালক)",
     subtitle: "শিক্ষা বিভাগ ও পাঠদান তত্ত্বাবধান, জামিয়া দারুস সুন্নাহ",
+    photo: "/misbah.jpeg",
+    photoPosition: "50% 18%",
   },
 ];
 
