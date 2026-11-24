@@ -1,5 +1,53 @@
 export type TeacherStatus = "faculty" | "alumni";
 
+export interface DirectorMember {
+  id: string;
+  precedence: number;
+  nameBn: string;
+  nameEn: string;
+  roleBadge: string;
+  designation: string;
+  subtitle: string;
+  photo?: string;
+  photoPosition?: string;
+  featured?: boolean;
+}
+
+export const DIRECTOR_BOARD: DirectorMember[] = [
+  {
+    id: "dir-01",
+    precedence: 1,
+    nameBn: "শাইখুল হাদিস আল্লামা ওবায়দুল্লাহ হামযাহ (দা.বা.)",
+    nameEn: "Shaykhul Hadith Allama Obaidullah Hamza",
+    roleBadge: "মুহতামিম ও পরিচালক",
+    designation: "মুহতামিম (প্রধান পরিচালক)",
+    subtitle: "সেক্রেটারি জেনারেল, আঞ্জুমানে ইত্তেহাদুল মাদারিস বাংলাদেশ",
+    photo: "/Obaidullah_Hamza.jpg",
+    photoPosition: "50% 18%",
+    featured: true,
+  },
+  {
+    id: "dir-02",
+    precedence: 2,
+    nameBn: "মাওলানা আজিজুল হক (দা.বা.)",
+    nameEn: "Mawlana Azizul Haque",
+    roleBadge: "নায়েবে মুহতামিম ও নির্বাহী পরিচালক",
+    designation: "নায়েবে মুহতামিম ও নির্বাহী পরিচালক",
+    subtitle: "সার্বিক পরিচালনা ও প্রশাসনিক তত্ত্বাবধান, জামিয়া দারুস সুন্নাহ",
+    photo: "/azizul hok.jpg",
+    photoPosition: "50% 18%",
+  },
+  {
+    id: "dir-03",
+    precedence: 3,
+    nameBn: "মাওলানা মিসবাহ উদ্দিন মামুন (দা.বা.)",
+    nameEn: "Mawlana Misbah Uddin Mamun",
+    roleBadge: "নাযেমে তা'লীমাত ও শিক্ষা পরিচালক",
+    designation: "নাযেমে তা'লীমাত ও শিক্ষা পরিচালক",
+    subtitle: "শিক্ষা বিভাগ ও পাঠদান তত্ত্বাবধান, জামিয়া দারুস সুন্নাহ",
+  },
+];
+
 export interface Teacher {
   id: string;
   nameBn: string;
@@ -9,7 +57,7 @@ export interface Teacher {
   departmentGroups: string[];
   phone: string;
   email?: string;
-  address: string;
+  address?: string;
   bio?: string;
   /** Original Google Drive upload URL from teachers.xlsx */
   photoDriveUrl?: string;
@@ -35,6 +83,17 @@ export const TEACHER_DEPARTMENT_FILTERS = [
  * Alumni / associate submissions (2) carry status: "alumni" so they can be viewed separately.
  */
 export const TEACHERS: Teacher[] = [
+  {
+    id: "t-14",
+    nameBn: "মাওলানা মুফতি আহমদুল্লাহ সাহেব",
+    nameEn: "Mawlana Mufti Ahmadullah",
+    designation: "মুহাদ্দিস ও ইফতা বিভাগীয় প্রধান",
+    department: "ইফতা ও কিতাব বিভাগ",
+    departmentGroups: ["ইফতা ও তাজবীদ", "কিতাব বিভাগ"],
+    phone: "+880 1820-060899",
+    status: "faculty",
+    localPhoto:"/ahmadullah.jpeg",
+  },
   {
     id: "t-05",
     nameBn: "মাওলানা মুফতি ওমর ফারুক",

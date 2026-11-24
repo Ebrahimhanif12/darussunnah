@@ -19,11 +19,17 @@ import {
 import {
   ACTIVE_FACULTY,
   ALUMNI_ASSOCIATES,
+  DIRECTOR_BOARD,
   TEACHER_DEPARTMENT_FILTERS,
+  type DirectorMember,
   type Teacher,
 } from "@/src/data/teachers";
 import { SectionHeader } from "@/src/components/SectionHeader";
-import { StaggerContainer, StaggerItem } from "@/src/components/MotionPrimitives";
+import {
+  FadeInUp,
+  StaggerContainer,
+  StaggerItem,
+} from "@/src/components/MotionPrimitives";
 
 interface TeachersDirectoryProps {
   mode?: "preview" | "full";
@@ -99,6 +105,136 @@ function TeacherAvatar({
   );
 }
 
+function DirectorPortrait({ director }: { director: DirectorMember }) {
+  const [imgFailed, setImgFailed] = useState(false);
+  const showPhoto = Boolean(director.photo) && !imgFailed;
+
+  return (
+    <div
+      className={`w-[168px] sm:w-[184px] mx-auto p-[3px] rounded-t-[96px] rounded-b-2xl bg-gradient-to-b from-[#E5BC54] via-[#D4A024] to-[#9E7212] ${
+        director.featured
+          ? "shadow-[0_14px_30px_-10px_rgba(11,77,44,0.42)]"
+          : "shadow-[0_10px_24px_-10px_rgba(11,77,44,0.28)]"
+      }`}
+    >
+      <div className="bg-[#0B4D2C] p-1.5 rounded-t-[90px] rounded-b-[13px]">
+        <div className="relative aspect-[4/5] w-full overflow-hidden rounded-t-[84px] rounded-b-[10px] border border-[#D4A024]/70 bg-gradient-to-b from-[#0a4527] via-[#07331d] to-[#052615]">
+          {showPhoto && director.photo ? (
+            <Image
+              src={director.photo}
+              alt={director.nameBn}
+              fill
+              sizes="190px"
+              onError={() => setImgFailed(true)}
+              style={{ objectPosition: director.photoPosition || "50% 18%" }}
+              className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+            />
+          ) : (
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+              <div className="absolute inset-0 islamic-pattern-dark opacity-55" />
+              <div className="relative w-16 h-16 rounded-full bg-white/10 border border-[#D4A024]/70 flex items-center justify-center shadow-inner">
+                <span className="font-english text-xl font-bold tracking-wider text-[#f5e9c8]">
+                  {getInitials(director.nameEn)}
+                </span>
+              </div>
+              <span className="relative mt-3 w-10 h-[2px] rounded-full bg-gradient-to-r from-transparent via-[#D4A024] to-transparent" />
+              <span
+                dir="rtl"
+                className="relative mt-2.5 font-arabic text-sm text-[#f5e9c8]/90"
+              >
+                حفظه الله
+              </span>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DirectorBoardShowcase() {
+  const orderedDirectors = [...DIRECTOR_BOARD].sort(
+    (a, b) => a.precedence - b.precedence,
+  );
+
+  return (
+    <div className="mb-12 md:mb-14">
+      <FadeInUp className="mb-7 text-center">
+        <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold tracking-wide bg-[#0B4D2C]/8 text-[#0B4D2C] border border-[#D4A024]/45">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#D4A024]" />
+          পরিচালনা পর্ষদ
+        </span>
+        <h3 className="mt-2.5 text-xl sm:text-2xl font-bold text-ink-primary">
+          জামিয়ার শীর্ষ নেতৃত্ব ও শিক্ষা পরিচালনা
+        </h3>
+        <div
+          className="mt-2.5 flex items-center justify-center gap-2"
+          aria-hidden="true"
+        >
+          <span className="h-[2px] w-10 rounded-full bg-gradient-to-r from-transparent to-[#D4A024]" />
+          <span className="w-2 h-2 rotate-45 bg-[#D4A024] rounded-[2px]" />
+          <span className="h-[2px] w-10 rounded-full bg-gradient-to-l from-transparent to-[#D4A024]" />
+        </div>
+      </FadeInUp>
+
+      <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7 max-w-5xl mx-auto">
+        {orderedDirectors.map((director) => (
+          <StaggerItem key={director.id} className="h-full">
+            <article
+              className={`group h-full rounded-3xl bg-white overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 ${
+                director.featured
+                  ? "border-2 border-[#D4A024]/70 shadow-md hover:shadow-xl"
+                  : "border border-brand-primary/15 hover:border-[#D4A024]/70 shadow-xs hover:shadow-lg"
+              }`}
+            >
+              <div
+                className={`h-1.5 ${
+                  director.featured
+                    ? "bg-gradient-to-r from-[#07331d] via-[#D4A024] to-[#0B4D2C]"
+                    : "bg-gradient-to-r from-[#0B4D2C] via-[#D4A024]/80 to-[#156e3b]"
+                }`}
+              />
+
+              <div className="p-6 sm:p-7 flex-1 flex flex-col items-center text-center">
+                <DirectorPortrait director={director} />
+
+                <span
+                  dir="rtl"
+                  className="mt-3.5 font-arabic text-sm text-[#0B4D2C]/90"
+                >
+                  حفظه الله تعالى
+                </span>
+
+                <span
+                  className={`mt-2.5 inline-flex items-center px-3 py-1 rounded-full text-xs font-bold ${
+                    director.featured
+                      ? "bg-[#0B4D2C] text-[#f5e9c8] border border-[#D4A024]/60"
+                      : "bg-surface-sage text-brand-primary border border-brand-primary/15"
+                  }`}
+                >
+                  {director.roleBadge}
+                </span>
+
+                <h4 className="mt-3 text-lg sm:text-[1.15rem] font-bold text-ink-primary leading-snug">
+                  {director.nameBn}
+                </h4>
+
+                <p className="mt-1 text-xs font-medium text-ink-muted">
+                  {director.nameEn}
+                </p>
+
+                <p className="mt-3 pt-3 border-t border-brand-primary/10 w-full text-xs sm:text-[13px] text-ink-body leading-relaxed">
+                  {director.subtitle}
+                </p>
+              </div>
+            </article>
+          </StaggerItem>
+        ))}
+      </StaggerContainer>
+    </div>
+  );
+}
+
 export function TeachersDirectory({
   mode = "preview",
 }: TeachersDirectoryProps) {
@@ -125,7 +261,7 @@ export function TeachersDirectory({
   });
 
   const visibleTeachers =
-    mode === "preview" ? ACTIVE_FACULTY.slice(0, 6) : filtered;
+    mode === "preview" ? ACTIVE_FACULTY.slice(0, 3) : filtered;
 
   return (
     <section
@@ -139,10 +275,32 @@ export function TeachersDirectory({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {mode === "preview" && (
           <SectionHeader
-            eyebrow="সম্মানিত শিক্ষকমণ্ডলী"
-            title="অভিজ্ঞ উলামায়ে কেরাম ও শিক্ষকবৃন্দ"
-            subtitle="হাক্কানী আলেম, মুহাদ্দিস, মুফতি, ক্বারী ও প্রশিক্ষিত মুয়াল্লিমদের নিবিড় তত্ত্বাবধানে পরিচালিত হচ্ছে আমাদের প্রতিটি বিভাগ।"
+            eyebrow="পরিচালনা পর্ষদ ও শিক্ষকমণ্ডলী"
+            title="পরিচালনা পর্ষদ ও অভিজ্ঞ শিক্ষকমণ্ডলী"
+            subtitle="হাক্কানী উলামায়ে কেরামের সুদক্ষ পরিচালনা এবং মুহাদ্দিস, মুফতি, ক্বারী ও প্রশিক্ষিত মুয়াল্লিমদের নিবিড় তত্ত্বাবধানে পরিচালিত হচ্ছে আমাদের প্রতিটি বিভাগ।"
           />
+        )}
+
+        {/* Director Board (Muhtamim, Nayebe Muhtamim, Najem-e-Talimat) */}
+        <DirectorBoardShowcase />
+
+        {/* Subheading separating Director Board from Faculty in preview mode */}
+        {mode === "preview" && (
+          <FadeInUp className="mb-6 flex items-center justify-between gap-4 flex-wrap">
+            <div className="flex items-center gap-3">
+              <span className="h-6 w-1.5 rounded-full bg-[#0B4D2C]" />
+              <h3 className="text-lg sm:text-xl font-bold text-ink-primary">
+                সম্মানিত শিক্ষকমণ্ডলী (আসাতিযায়ে কেরাম)
+              </h3>
+            </div>
+            <Link
+              href="/teachers"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-primary hover:text-brand-secondary transition-colors"
+            >
+              <span>আরও শিক্ষক দেখুন</span>
+              <ArrowRight className="w-4 h-4 text-brand-gold" />
+            </Link>
+          </FadeInUp>
         )}
 
         {/* Full Mode Controls: Notice Banner, Faculty/Alumni Tabs, Department Filter, Search */}
@@ -286,10 +444,12 @@ export function TeachersDirectory({
                         {teacher.phone}
                       </a>
                     </div>
-                    <div className="flex items-start gap-2">
-                      <MapPin className="w-3.5 h-3.5 text-brand-gold shrink-0 mt-0.5" />
-                      <span className="line-clamp-1">{teacher.address}</span>
-                    </div>
+                    {teacher.address && (
+                      <div className="flex items-start gap-2">
+                        <MapPin className="w-3.5 h-3.5 text-brand-gold shrink-0 mt-0.5" />
+                        <span className="line-clamp-1">{teacher.address}</span>
+                      </div>
+                    )}
                   </div>
 
                   <div className="mt-auto pt-4 flex items-center justify-between">
@@ -423,15 +583,17 @@ export function TeachersDirectory({
                   )}
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-surface-ivory border border-brand-primary/10">
-                  <p className="text-xs text-ink-muted mb-1 flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-brand-primary" />
-                    ঠিকানা
-                  </p>
-                  <p className="font-medium text-ink-body">
-                    {selectedTeacher.address}
-                  </p>
-                </div>
+                {selectedTeacher.address && (
+                  <div className="p-3.5 rounded-xl bg-surface-ivory border border-brand-primary/10">
+                    <p className="text-xs text-ink-muted mb-1 flex items-center gap-1.5">
+                      <MapPin className="w-3.5 h-3.5 text-brand-primary" />
+                      ঠিকানা
+                    </p>
+                    <p className="font-medium text-ink-body">
+                      {selectedTeacher.address}
+                    </p>
+                  </div>
+                )}
               </div>
 
               <div className="px-6 py-3.5 bg-surface-ivory border-t border-brand-primary/10 flex justify-end">

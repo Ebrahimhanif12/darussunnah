@@ -70,6 +70,7 @@ export function SiteFooter() {
             <ul className="space-y-2.5 text-sm">
               {[
                 { label: "প্রতিষ্ঠানের ইতিহাস ও পরিচিতি", href: "/about" },
+                { label: "স্মরণীয় আকাবির (রহ.)", href: "/akabir" },
                 { label: "মুহতামিমের বাণী", href: "/about#muhtamim" },
                 { label: "শিক্ষকমণ্ডলীর তালিকা", href: "/teachers" },
                 { label: "ভর্তি তথ্য ও নিয়মাবলী", href: "/admission" },

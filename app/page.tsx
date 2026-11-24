@@ -1,6 +1,7 @@
 import { HeroSlider } from "@/src/components/sections/HeroSlider";
 import { NoticeTicker } from "@/src/components/sections/NoticeTicker";
 import { AboutHistorySection } from "@/src/components/sections/AboutHistorySection";
+import { AkabirSection } from "@/src/components/sections/AkabirSection";
 import { NoticeBoardSection } from "@/src/components/sections/NoticeBoardSection";
 import { MuhtamimMessageSection } from "@/src/components/sections/MuhtamimMessageSection";
 import { DepartmentsSection } from "@/src/components/sections/DepartmentsSection";
@@ -20,6 +21,7 @@ export default async function HomePage() {
       <HeroSlider />
       <NoticeTicker notices={notices} />
       <AboutHistorySection />
+      <AkabirSection />
       <NoticeBoardSection notices={notices} mode="preview" />
       <MuhtamimMessageSection />
       <DepartmentsSection mode="preview" />

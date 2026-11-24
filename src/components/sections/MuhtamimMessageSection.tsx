@@ -27,24 +27,27 @@ export function MuhtamimMessageSection() {
                 <div className="absolute inset-0 islamic-pattern-dark opacity-45 pointer-events-none" />
 
                 <div className="relative z-10 flex flex-col items-center">
-                  {/* Arch-inspired Dignified Institutional Portrait Placeholder */}
-                  <div className="w-40 h-44 sm:w-44 sm:h-48 rounded-t-full rounded-b-2xl border-2 border-brand-gold bg-white/10 backdrop-blur-xs p-3 flex flex-col items-center justify-center shadow-xl">
-                    <div className="w-24 h-24 rounded-full overflow-hidden bg-white p-1 ring-2 ring-brand-gold-soft shadow-md">
-                      <Image
-                        src={SITE_INFO.logo}
-                        alt={MUHTAMIM_MESSAGE.nameBn}
-                        width={96}
-                        height={96}
-                        className="w-full h-full object-contain rounded-full"
-                      />
+                  {/* Arch-inspired Dignified Institutional Portrait */}
+                  <div className="w-44 sm:w-48 p-[3px] rounded-t-[110px] rounded-b-2xl bg-gradient-to-b from-[#E5BC54] via-[#D4A024] to-[#9E7212] shadow-xl">
+                    <div className="bg-[#07331d] p-1.5 rounded-t-[104px] rounded-b-[13px]">
+                      <div className="relative aspect-[4/5] w-full overflow-hidden rounded-t-[98px] rounded-b-[10px] border border-[#D4A024]/70 bg-[#0a3f24]">
+                        <Image
+                          src="/Obaidullah_Hamza.jpg"
+                          alt={MUHTAMIM_MESSAGE.nameBn}
+                          fill
+                          sizes="192px"
+                          style={{ objectPosition: "50% 18%" }}
+                          className="object-cover"
+                        />
+                      </div>
                     </div>
-                    <span
-                      dir="rtl"
-                      className="mt-3 font-arabic text-sm text-brand-gold-soft"
-                    >
-                      حفظه الله تعالى
-                    </span>
                   </div>
+                  <span
+                    dir="rtl"
+                    className="mt-3 font-arabic text-base text-brand-gold-soft"
+                  >
+                    حفظه الله تعالى
+                  </span>
 
                   <h3 className="mt-6 text-xl font-bold text-white leading-snug">
                     {MUHTAMIM_MESSAGE.nameBn}
