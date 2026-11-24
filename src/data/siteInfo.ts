@@ -37,6 +37,7 @@ export const SITE_INFO = {
   admissionPhone: "+৮৮০ ১৮২২-৩২২৮১১",
   admissionPhoneRaw: "+8801822322811",
   email: "info@darussunnahnhila.edu.bd",
+  facebookUrl: "https://www.facebook.com/Jamiya.darussunnah",
   officeHoursBn: "শনিবার থেকে বৃহস্পতিবার: সকাল ৮:০০ টা — বিকাল ৫:০০ টা",
   googleMapsUrl:
     "https://maps.google.com/maps?rlz=1C1GCEU_en&udm&fvr=1&pvq=Cg0vZy8xMWh6eTg4bnRtIhcKEWRhcnVzc3VubmFoIGhuaWxhEAIYA4kB5gOWKvQGVmw&lqi=ChFkYXJ1c3N1bm5haCBobmlsYUizppHU-6-AgAhaFxAAEAEiEWRhcnVzc3VubmFoIGhuaWxhkgEXZWR1Y2F0aW9uYWxfaW5zdGl0dXRpb24&vet=10CAAQoqAOahcKEwjA94f9_J6YAxUAAAAAHQAAAAAQBw..i&cs=1&um=1&ie=UTF-8&fb=1&gl=bd&sa=X&ftid=0x30ae090e89cccd3f:0x6c5606f42a9603e6",

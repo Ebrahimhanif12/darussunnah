@@ -104,6 +104,23 @@ export function SiteHeader() {
             >
               {SITE_INFO.mottoAr}
             </span>
+            <a
+              href={SITE_INFO.facebookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="অফিসিয়াল ফেসবুক পেজ"
+              title="অফিসিয়াল ফেসবুক পেজ"
+              className="inline-flex items-center justify-center w-7 h-7 rounded bg-white/10 hover:bg-[#1877F2] text-white transition-colors"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-3.5 h-3.5"
+                aria-hidden="true"
+              >
+                <path d="M22 12.07C22 6.48 17.52 2 11.93 2 6.35 2 1.87 6.48 1.87 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.77v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.9h-2.34V22c4.78-.75 8.44-4.91 8.44-9.93Z" />
+              </svg>
+            </a>
             <Link
               href="/admission"
               className="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white/10 hover:bg-white/20 text-white font-medium transition-colors"
