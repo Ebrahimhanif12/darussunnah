@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   Clock,
   ExternalLink,
+  Globe,
   HeartHandshake,
   Mail,
   MapPin,
@@ -216,10 +217,48 @@ export function SiteFooter() {
             © {SITE_INFO.copyrightYearBn} {SITE_INFO.shortNameBn}। সর্বস্বত্ব
             সংরক্ষিত।
           </p>
-          <p className="text-center text-brand-gold-soft/90 font-medium">
-            Developed and maintained by{" "}
-            <span className="text-white font-semibold">Ebrahim Hanif</span>
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-1.5 text-brand-gold-soft/90 font-medium">
+            <span>
+              Developed and maintained by{" "}
+              <a
+                href={SITE_INFO.developer.portfolioUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white font-semibold hover:text-brand-gold-bright underline decoration-white/30 hover:decoration-brand-gold-bright underline-offset-2 transition-colors"
+              >
+                {SITE_INFO.developer.name}
+              </a>
+            </span>
+            <span className="inline-flex items-center gap-1.5 ml-1">
+              <a
+                href={SITE_INFO.developer.portfolioUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${SITE_INFO.developer.name} Portfolio`}
+                title="Portfolio"
+                className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white/10 hover:bg-brand-gold text-white hover:text-brand-dark transition-colors"
+              >
+                <Globe className="w-3.5 h-3.5" aria-hidden="true" />
+              </a>
+              <a
+                href={SITE_INFO.developer.facebookUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${SITE_INFO.developer.name} Facebook`}
+                title="Facebook"
+                className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white/10 hover:bg-[#1877F2] text-white transition-colors"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-3.5 h-3.5"
+                  aria-hidden="true"
+                >
+                  <path d="M22 12.07C22 6.48 17.52 2 11.93 2 6.35 2 1.87 6.48 1.87 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.03H7.77v-2.9h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.89h2.78l-.44 2.9h-2.34V22c4.78-.75 8.44-4.91 8.44-9.93Z" />
+                </svg>
+              </a>
+            </span>
+          </div>
           <p className="font-english text-[11px] tracking-wider uppercase text-brand-gold-soft/75 text-center md:text-right">
             {SITE_INFO.nameEn} • Est. 1927
           </p>

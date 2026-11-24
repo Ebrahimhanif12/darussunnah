@@ -46,6 +46,11 @@ export const SITE_INFO = {
   logo: "/madrasahlogo.jpg",
   banner: "/banner.jpg",
   copyrightYearBn: "২০২৬",
+  developer: {
+    name: "Ebrahim Hanif",
+    portfolioUrl: "https://ebrahimhanif.vercel.app/",
+    facebookUrl: "https://www.facebook.com/ebrahim.hanif.779/",
+  },
 };
 
 export const NAVIGATION_ITEMS: NavItem[] = [
