@@ -31,8 +31,8 @@ export const DIRECTOR_BOARD: DirectorMember[] = [
     precedence: 2,
     nameBn: "মাওলানা আজিজুল হক (দা.বা.)",
     nameEn: "Mawlana Azizul Haque",
-    roleBadge: "নায়েবে মুহতামিম ও নির্বাহী পরিচালক",
-    designation: "নায়েবে মুহতামিম ও নির্বাহী পরিচালক",
+    roleBadge: "নায়েবে মুহতামিম (নির্বাহী পরিচালক)",
+    designation: "নায়েবে মুহতামিম (নির্বাহী পরিচালক)",
     subtitle: "সার্বিক পরিচালনা ও প্রশাসনিক তত্ত্বাবধান, জামিয়া দারুস সুন্নাহ",
     photo: "/azizul hok.jpg",
     photoPosition: "50% 18%",
@@ -42,8 +42,8 @@ export const DIRECTOR_BOARD: DirectorMember[] = [
     precedence: 3,
     nameBn: "মাওলানা মিসবাহ উদ্দিন মামুন (দা.বা.)",
     nameEn: "Mawlana Misbah Uddin Mamun",
-    roleBadge: "নাযেমে তা'লীমাত ও শিক্ষা পরিচালক",
-    designation: "নাযেমে তা'লীমাত ও শিক্ষা পরিচালক",
+    roleBadge: "নাযেমে তা'লীমাত (শিক্ষা পরিচালক)",
+    designation: "নাযেমে তা'লীমাত (শিক্ষা পরিচালক)",
     subtitle: "শিক্ষা বিভাগ ও পাঠদান তত্ত্বাবধান, জামিয়া দারুস সুন্নাহ",
   },
 ];
@@ -85,14 +85,14 @@ export const TEACHER_DEPARTMENT_FILTERS = [
 export const TEACHERS: Teacher[] = [
   {
     id: "t-14",
-    nameBn: "মাওলানা মুফতি আহমদুল্লাহ সাহেব",
+    nameBn: "মাওলানা মুফতি আহমদুল্লাহ ফরিদ",
     nameEn: "Mawlana Mufti Ahmadullah",
     designation: "মুহাদ্দিস ও ইফতা বিভাগীয় প্রধান",
     department: "ইফতা ও কিতাব বিভাগ",
     departmentGroups: ["ইফতা ও তাজবীদ", "কিতাব বিভাগ"],
     phone: "+880 1820-060899",
     status: "faculty",
-    localPhoto:"/ahmadullah.jpeg",
+    localPhoto:"/ahmadullah2.jpeg",
   },
   {
     id: "t-05",
@@ -103,8 +103,8 @@ export const TEACHERS: Teacher[] = [
     departmentGroups: ["ইফতা ও তাজবীদ", "কিতাব বিভাগ"],
     phone: "01813-261891",
     address: "তুলাতলী, হোয়াইক্যং, টেকনাফ, কক্সবাজার।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1ME2qpBAUDHNEfYl27A6KJfWQCMLH3un1",
+    localPhoto:
+      "/omorFaruk.jpg",
     status: "faculty",
   },
   {
@@ -119,8 +119,8 @@ export const TEACHERS: Teacher[] = [
     address:
       "গ্রাম: মধ্যম হলদিয়া পালং, পোস্ট: মরিচ্যা পালং, থানা: উখিয়া, জেলা: কক্সবাজার।",
     bio: "দাওরায়ে হাদীস (মাস্টার্স) সম্পন্ন। সুদীর্ঘ ৩০ বছর ধরে নিষ্ঠার সাথে দ্বীনি শিক্ষাদান ও প্রতিষ্ঠানের দায়িত্ব পালন করে আসছেন।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1mboLtsHZg254jEifrUhhH36G1H4tAhf7",
+    localPhoto:
+      "/najir.jpg",
     status: "faculty",
   },
   {
@@ -136,8 +136,8 @@ export const TEACHERS: Teacher[] = [
     address:
       "গ্রাম: ধাওন খালী, ইউনিয়ন: পি.এম. খালী, থানা ও জেলা: কক্সবাজার, চট্টগ্রাম।",
     bio: "শিক্ষাগত যোগ্যতা: দাওরায়ে হাদীস (মাস্টার্স) এবং ক্বেরাতে হাফস ও ক্বেরাতে সাবআ (সাবআ ক্বারী) সম্পন্ন।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1TiuUKjwO6NbZ7bhi9oZbeiu41qAYlgfX",
+    localPhoto:
+      "/absar.jpg",
     status: "faculty",
   },
   {
@@ -151,8 +151,8 @@ export const TEACHERS: Teacher[] = [
     email: "rahimullahshamsu@gmail.com",
     address: "বালুখালী (তুলাতলী), হোয়াইক্যং, টেকনাফ, কক্সবাজার।",
     bio: "নূরানী ৩য় শ্রেণী ও সাধারণ শিক্ষায় ৮ম শ্রেণী সমাপ্ত করার পাশাপাশি হিফজুল কুরআন সম্পন্ন করেছেন। পরবর্তীতে কিতাব বিভাগে দাওরায়ে হাদীস (মাস্টার্স সমমান) অর্জন করেন এবং বিগত ৫ বছর ধরে একনিষ্ঠভাবে দ্বীনি খেদমতে নিয়োজিত আছেন।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1RiWMJlhJ4YzTWk9nZDWowuhzTrt-5cyO",
+    localPhoto:
+      "/rahim.jpg",
     status: "faculty",
   },
   {
@@ -164,8 +164,8 @@ export const TEACHERS: Teacher[] = [
     departmentGroups: ["নূরানী বিভাগ"],
     phone: "01867-015338",
     address: "পশ্চিম সিকদার পাড়া, হ্নীলা, টেকনাফ, কক্সবাজার।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1T6djITzh-Fwh236p74AVNTj26qP5Rb4-",
+    localPhoto:
+      "/nur.jpg",
     status: "faculty",
   },
   {
@@ -177,8 +177,8 @@ export const TEACHERS: Teacher[] = [
     departmentGroups: ["নূরানী বিভাগ"],
     phone: "01868-517876",
     address: "পশ্চিম পানখালী, দক্ষিণ হ্নীলা, টেকনাফ, কক্সবাজার।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1sbCo3qXUqOceSeSBJJLMH1G12BDtTenC",
+    localPhoto:
+      "/ashab.jpg",
     status: "faculty",
   },
   {
@@ -192,8 +192,8 @@ export const TEACHERS: Teacher[] = [
     email: "Najirosama2@gmail.com",
     address: "মিস্ত্রি পাড়া, শাহ্ পরীর দ্বীপ, টেকনাফ, কক্সবাজার।",
     bio: "পবিত্র কুরআনের হিফজ সম্পন্ন—বাহরুল উলুম বড় মাদরাসা, শাহ্ পরীর দ্বীপ। দাওরায়ে হাদীস ফারেগ—দারুল উলুম মঈনুল ইসলাম, হাটহাজারী, চট্টগ্রাম। দাখিল ও আলিম সম্পন্ন এবং বর্তমানে ফাজিল ২য় বর্ষে অধ্যয়নরত—রাজা পালং এম.ইউ. ফাজিল মাদরাসা।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1RZ9xrQe90kypxlsP8kprUQNACq9IFOfT",
+    localPhoto:
+      "/osama.HEIC",
     status: "faculty",
   },
   {
@@ -205,25 +205,25 @@ export const TEACHERS: Teacher[] = [
     departmentGroups: ["নূরানী বিভাগ"],
     phone: "01822-322811",
     address: "পশ্চিম সিকদার পাড়া, হ্নীলা, টেকনাফ, কক্সবাজার।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1ve_QdxmjMrd3h8zjhpB5sKseO-PfDiu7",
+    localPhoto:
+      "/nurhos.jpg",
     status: "faculty",
   },
-  {
-    id: "t-13",
-    nameBn: "মাওলানা সাইফুল ইসলাম",
-    nameEn: "Mv. Saiful Islam",
-    designation: "সিনিয়র শিক্ষক",
-    department: "নূরানী বিভাগ",
-    departmentGroups: ["নূরানী বিভাগ"],
-    phone: "01897-720933",
-    email: "saifulislamjalal966@gmail.com",
-    address: "লেদা, হ্নীলা, টেকনাফ, কক্সবাজার।",
-    bio: "দাওরায়ে হাদীস, নূরানী ট্রেনিং ও হুফফাযুল কুরআনের প্রশিক্ষণ অর্জন করেছেন। ২০১১-২০১২ সাল থেকে সুনামের সাথে দ্বীনি শিক্ষাদান করে আসছেন।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1ijA0634Wwdcz1vkxL4oog42lqFALGvQX",
-    status: "faculty",
-  },
+  // {
+  //   id: "t-13",
+  //   nameBn: "মাওলানা সাইফুল ইসলাম",
+  //   nameEn: "Mv. Saiful Islam",
+  //   designation: "সিনিয়র শিক্ষক",
+  //   department: "নূরানী বিভাগ",
+  //   departmentGroups: ["নূরানী বিভাগ"],
+  //   phone: "01897-720933",
+  //   email: "saifulislamjalal966@gmail.com",
+  //   address: "লেদা, হ্নীলা, টেকনাফ, কক্সবাজার।",
+  //   bio: "দাওরায়ে হাদীস, নূরানী ট্রেনিং ও হুফফাযুল কুরআনের প্রশিক্ষণ অর্জন করেছেন। ২০১১-২০১২ সাল থেকে সুনামের সাথে দ্বীনি শিক্ষাদান করে আসছেন।",
+  //   photoDriveUrl:
+  //     "https://drive.google.com/open?id=1ijA0634Wwdcz1vkxL4oog42lqFALGvQX",
+  //   status: "faculty",
+  // },
   {
     id: "t-03",
     nameBn: "মাওলানা মোহাম্মাদ ত্বহা",
@@ -235,8 +235,8 @@ export const TEACHERS: Teacher[] = [
     email: "mtuha0367@gmail.com",
     address: "হ্নীলা, পশ্চিম সিকদার পাড়া, টেকনাফ, কক্সবাজার।",
     bio: "দাওরায়ে হাদীস সম্পন্ন ও নূরানী মুয়াল্লিম প্রশিক্ষণপ্রাপ্ত।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1tX1RRLPOr5K8F_ROZLlc64U1XT5P7ger",
+    localPhoto:
+      "/tuha.jpg",
     status: "faculty",
   },
   {
@@ -249,8 +249,8 @@ export const TEACHERS: Teacher[] = [
     phone: "01820-881510",
     address: "পশ্চিম সিকদার পাড়া, হ্নীলা, টেকনাফ, কক্সবাজার।",
     bio: "২০০৮ সালে আল জামিয়াতুল ইসলামিয়া দারুস সুন্নাহ, হ্নীলা থেকে দাওরায়ে হাদীস সম্পন্ন করেছেন।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1g8hi6CsEsDjFOPBbbwnPc85OSwiemRd_",
+    localPhoto:
+      "/nury.jpg",
     status: "faculty",
   },
   {
@@ -264,8 +264,8 @@ export const TEACHERS: Teacher[] = [
     email: "mdabsarkamal231@gmail.com",
     address: "পূর্ব পানখালী, হ্নীলা, টেকনাফ, কক্সবাজার।",
     bio: "দাওরায়ে হাদীস (মাস্টার্স), ২০১৪-১৫ খ্রি. এবং নূরানী মুয়াল্লিম প্রশিক্ষণপ্রাপ্ত।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1SCSoh05JmmoDS3v-CAzR-K0G2R2CtLm6",
+    localPhoto:
+      "/absarkamal.jpg",
     status: "faculty",
   },
   {
@@ -277,42 +277,42 @@ export const TEACHERS: Teacher[] = [
     departmentGroups: ["ইবতেদায়ী বিভাগ"],
     phone: "০১৮১৪২৭৩৫",
     address: "পশ্চিম সিকদার পাড়া, হ্নীলা, টেকনাফ, কক্সবাজার।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1pvzJzICpsU0dvuCqJbR4bpU0YfoJPTrk",
+    localPhoto:
+      "/anam.jpeg",
     status: "faculty",
   },
   // Separated alumni / associate submissions from teachers.xlsx
-  {
-    id: "a-02",
-    nameBn: "হাফেজ মাওলানা মোঃ তৈয়ব",
-    nameEn: "Hafez Mv. Md. Tayub",
-    designation: "প্রাক্তন কৃতি শিক্ষার্থী ও সাবেক শিক্ষক",
-    department: "প্রাক্তন শিক্ষার্থী (দাখিল ও হিফজ)",
-    departmentGroups: ["প্রাক্তন শিক্ষার্থী"],
-    phone: "01814-267942",
-    email: "mohammadtayub42@gmail.com",
-    address:
-      "গ্রাম: পশ্চিম সিকদার পাড়া, পোস্ট: হ্নীলা-৪৭৬১, উপজেলা: টেকনাফ, জেলা: কক্সবাজার।",
-    bio: "জামিয়া দারুস সুন্নাহ হ্নীলার প্রাক্তন শিক্ষার্থী—মকতব, হিফজুল কুরআন ও কিতাব বিভাগের প্রাথমিক জামাতসমূহ অত্র জামিয়ায় সম্পন্ন করেন। পরবর্তীতে দারুল উলুম মঈনুল ইসলাম হাটহাজারী থেকে দাওরায়ে হাদীস এবং আলিয়া ধারায় দাখিল থেকে কামিল (মাস্টার্স) সনদ অর্জন করেন। দীর্ঘদিন বিভিন্ন প্রতিষ্ঠানে শিক্ষকতার পর বর্তমানে উদ্যোক্তা হিসেবে নিয়োজিত।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1j-Nqo7s9IvbN3a86_V_q02zQXpFVforp",
-    status: "alumni",
-  },
-  {
-    id: "a-01",
-    nameBn: "হেলাল উদ্দীন আরমান",
-    nameEn: "Helal Uddin Arman",
-    designation: "প্রাক্তন শিক্ষার্থী ও শুভানুধ্যায়ী (ব্যবসায়ী)",
-    department: "কম্পিউটার শাখা ও শুভানুধ্যায়ী",
-    departmentGroups: ["কম্পিউটার বিভাগ", "প্রাক্তন শিক্ষার্থী"],
-    phone: "01815-715880",
-    email: "helaluddin.arman80@gmail.com",
-    address:
-      "গ্রাম: নাটমুরা পাড়া, ওয়ার্ড নং-০৫, ডাকঘর: হ্নীলা বাজার (৪৭৬১), টেকনাফ, কক্সবাজার।",
-    photoDriveUrl:
-      "https://drive.google.com/open?id=1C4OU2WYiZeeGNvX5-SbqDi6WfXma4l_q",
-    status: "alumni",
-  },
+  // {
+  //   id: "a-02",
+  //   nameBn: "হাফেজ মাওলানা মোঃ তৈয়ব",
+  //   nameEn: "Hafez Mv. Md. Tayub",
+  //   designation: "প্রাক্তন কৃতি শিক্ষার্থী ও সাবেক শিক্ষক",
+  //   department: "প্রাক্তন শিক্ষার্থী (দাখিল ও হিফজ)",
+  //   departmentGroups: ["প্রাক্তন শিক্ষার্থী"],
+  //   phone: "01814-267942",
+  //   email: "mohammadtayub42@gmail.com",
+  //   address:
+  //     "গ্রাম: পশ্চিম সিকদার পাড়া, পোস্ট: হ্নীলা-৪৭৬১, উপজেলা: টেকনাফ, জেলা: কক্সবাজার।",
+  //   bio: "জামিয়া দারুস সুন্নাহ হ্নীলার প্রাক্তন শিক্ষার্থী—মকতব, হিফজুল কুরআন ও কিতাব বিভাগের প্রাথমিক জামাতসমূহ অত্র জামিয়ায় সম্পন্ন করেন। পরবর্তীতে দারুল উলুম মঈনুল ইসলাম হাটহাজারী থেকে দাওরায়ে হাদীস এবং আলিয়া ধারায় দাখিল থেকে কামিল (মাস্টার্স) সনদ অর্জন করেন। দীর্ঘদিন বিভিন্ন প্রতিষ্ঠানে শিক্ষকতার পর বর্তমানে উদ্যোক্তা হিসেবে নিয়োজিত।",
+  //   photoDriveUrl:
+  //     "https://drive.google.com/open?id=1j-Nqo7s9IvbN3a86_V_q02zQXpFVforp",
+  //   status: "alumni",
+  // },
+  // {
+  //   id: "a-01",
+  //   nameBn: "হেলাল উদ্দীন আরমান",
+  //   nameEn: "Helal Uddin Arman",
+  //   designation: "প্রাক্তন শিক্ষার্থী ও শুভানুধ্যায়ী (ব্যবসায়ী)",
+  //   department: "কম্পিউটার শাখা ও শুভানুধ্যায়ী",
+  //   departmentGroups: ["কম্পিউটার বিভাগ", "প্রাক্তন শিক্ষার্থী"],
+  //   phone: "01815-715880",
+  //   email: "helaluddin.arman80@gmail.com",
+  //   address:
+  //     "গ্রাম: নাটমুরা পাড়া, ওয়ার্ড নং-০৫, ডাকঘর: হ্নীলা বাজার (৪৭৬১), টেকনাফ, কক্সবাজার।",
+  //   photoDriveUrl:
+  //     "https://drive.google.com/open?id=1C4OU2WYiZeeGNvX5-SbqDi6WfXma4l_q",
+  //   status: "alumni",
+  // },
 ];
 
 export const ACTIVE_FACULTY = TEACHERS.filter((t) => t.status === "faculty");

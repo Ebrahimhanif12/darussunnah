@@ -304,7 +304,7 @@ export function SiteHeader() {
                 className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-lg bg-brand-gold hover:bg-brand-gold-bright text-brand-dark text-sm font-bold shadow-sm transition-colors"
               >
                 <GraduationCap className="w-4 h-4" />
-                <span>ভর্তি চলছে</span>
+                <span>ভর্তি</span>
               </Link>
               <Link
                 href="/admin"

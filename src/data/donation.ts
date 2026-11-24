@@ -77,7 +77,7 @@ export const PAYMENT_ACCOUNTS: PaymentAccount[] = [
     id: "nagad",
     providerBn: "নগদ (Nagad)",
     typeBn: "পার্সোনাল / অনুদান হিসাব",
-    accountNumber: "01822322811",
+    accountNumber: "01815672785",
     accountNameBn: "অফিস হিসাব — জামিয়া দারুস সুন্নাহ, হ্নীলা",
     branchOrNoteBn: "অনুদান প্রেরণের পর রসিদ সংগ্রহের জন্য অফিসে কল বা মেসেজ করুন",
     accentColor: "orange",
